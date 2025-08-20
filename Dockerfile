@@ -54,7 +54,7 @@ RUN set -eux; \
     apt-get remove -y gnupg unzip curl; \
     rm -rf /var/lib/apt/lists/*;
 
-RUN chmod +x /opt/sonarqube/docker/entrypoint.sh
+RUN chmod +x  entrypoint.sh
 
 COPY entrypoint.sh ${SONARQUBE_HOME}/docker/
 
