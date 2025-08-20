@@ -54,9 +54,8 @@ RUN set -eux; \
     apt-get remove -y gnupg unzip curl; \
     rm -rf /var/lib/apt/lists/*;
 
-RUN chmod +x  entrypoint.sh
-
 COPY entrypoint.sh ${SONARQUBE_HOME}/docker/
+RUN chmod +x  entrypoint.sh
 
 WORKDIR ${SONARQUBE_HOME}
 EXPOSE 9000
